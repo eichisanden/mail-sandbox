@@ -1,3 +1,5 @@
+package v2_1_0;
+
 import jakarta.mail.*;
 import jakarta.mail.internet.ContentType;
 import jakarta.mail.internet.InternetAddress;

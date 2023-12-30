@@ -1,3 +1,5 @@
+package v2_1_0;
+
 import jakarta.mail.Message;
 import jakarta.mail.MessagingException;
 import jakarta.mail.Session;
