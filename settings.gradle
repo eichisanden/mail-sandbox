@@ -1,3 +1,4 @@
 rootProject.name = 'mail-sandbox'
 
+include '1.6.7'
 include 'jakarta2.1'
