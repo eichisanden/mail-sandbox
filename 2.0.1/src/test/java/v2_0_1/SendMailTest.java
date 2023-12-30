@@ -1,12 +1,11 @@
-package dev.v1_6_7;
+package v2_0_1;
 
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetupTest;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.AddressException;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
@@ -14,16 +13,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SendMailTest {
-    private static GreenMail greenMail;
+    private GreenMail greenMail;
 
-    @BeforeAll
-    static void setUp() {
+    @BeforeEach
+    void setUp() {
         greenMail = new GreenMail(ServerSetupTest.SMTP);
         greenMail.start();
     }
 
-    @AfterAll
-    static void tearDown() {
+    @AfterEach
+    void tearDown() {
         greenMail.stop();
     }
 
